@@ -1,1 +1,22 @@
-#%RAML 1.0 ResourceType
+#%RAML 1.0 Library
+usage: Collection of commonly reusable RAMLs
+
+resourceTypes:
+  readMember: !include resourceTypes/member/read.raml
+  createMember: !include resourceTypes/member/create.raml
+  readCollection: !include resourceTypes/collection//read.raml
+
+traits:
+  #for caching
+  hasCacheable: !include traits/caching/hasCacheable.raml
+
+  #common traits
+  hasCommonHeaders: !include traits/commons/hasCommonHeaders.raml
+
+  #for pagination
+  hasCountable: !include traits/pagination/hasCountable.raml
+  hasPageable: !include traits/pagination/hasPageable.raml
+  hasSortable: !include traits/pagination/hasSortable.raml
+
+  #for rate-limiting
+  hasRateLimiting: !include traits/rate-limiting/hasRateLimiting.raml
