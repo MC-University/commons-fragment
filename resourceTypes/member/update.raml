@@ -1,0 +1,14 @@
+#%RAML 1.0 ResourceType
+usage: Update a single record
+
+patch:
+  displayName: Patch Resource Type for <<resourcePathName | !singularize | !uppercamelcase>> summary.
+  description: Patch Resource Type for <<resourcePathName | !singularize | !uppercamelcase>> summary.
+  responses:
+    200:
+      description: |
+        Success Response
+      body:
+        application/json:
+          example: <<patchResponseExample>>
+          type: <<patchResponseType>>
