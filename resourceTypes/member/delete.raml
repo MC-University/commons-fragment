@@ -1,0 +1,14 @@
+#%RAML 1.0 ResourceType
+usage: Delete a single record
+
+delete:
+  displayName: Delete Resource Type for <<resourcePathName | !singularize | !uppercamelcase>> summary.
+  description: Delete Resource Type for <<resourcePathName | !singularize | !uppercamelcase>> summary.
+  responses:
+    200:
+      description: |
+        Success Response
+      body:
+        application/json:
+          example: <<deleteResponseExample>>
+          type: <<deleteResponseType>>
