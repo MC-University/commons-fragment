@@ -26,6 +26,13 @@ get:
         application/json:
           example: <<errorResponseExample>>
           type: <<errorResponseType>>
+    504:
+      description: |
+        Gateway Timeout
+      body:
+        application/json:
+          example: <<errorResponseExample>>
+          type: <<errorResponseType>>
 post:
   displayName: Post Resource Type for <<resourcePathName | !singularize | !uppercamelcase>> summary.
   description: Post Resource Type for <<resourcePathName | !singularize | !uppercamelcase>> summary.
