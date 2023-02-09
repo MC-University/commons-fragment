@@ -14,7 +14,14 @@ get:
           type: <<getResponseType>>
     500:
       description: |
-        INte
+        Internal Server Error
+      body:
+        application/json:
+          example: <<errorResponseExample>>
+          type: <<errorResponseType>>
+    502:
+      description: |
+        Bad Gateway
       body:
         application/json:
           example: <<errorResponseExample>>
