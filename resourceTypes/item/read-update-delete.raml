@@ -11,6 +11,27 @@ get:
         application/json:
           example: <<getResponseExample>>
           type: <<getResponseType>>
+    500:
+      description: |
+        Internal Server Error
+      body:
+        application/json:
+          example: <<errorResponseExample>>
+          type: <<errorResponseType>>
+    502:
+      description: |
+        Bad Gateway
+      body:
+        application/json:
+          example: <<errorResponseExample>>
+          type: <<errorResponseType>>
+    504:
+      description: |
+        Gateway Timeout
+      body:
+        application/json:
+          example: <<errorResponseExample>>
+          type: <<errorResponseType>>
 put:
   displayName: Put Resource Type for <<resourcePathName | !singularize | !uppercamelcase>> summary.
   description: Put Resource Type for <<resourcePathName | !singularize | !uppercamelcase>> summary.
