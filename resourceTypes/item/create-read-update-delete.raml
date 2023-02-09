@@ -10,3 +10,13 @@ post:
       body:
         application/json:
           example: <<postResponseExample>>
+get:
+  displayName: Get Resource Type for <<resourcePathName | !singularize | !uppercamelcase>> summary.
+  description: Get Resource Type for <<resourcePathName | !singularize | !uppercamelcase>> summary.
+  responses:
+    200:
+      description: Success Response
+      body:
+        application/json:
+          example: <<getResponseExample>>
+          type: <<getResponseType>>
