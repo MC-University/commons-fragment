@@ -6,7 +6,8 @@ get:
   description: Get Resource Type for <<resourcePathName | !singularize | !uppercamelcase>> summary.
   responses:
     200:
-      description: Success Response
+      description: |
+        Success Response
       body:
         application/json:
           example: <<getResponseExample>>
@@ -37,10 +38,39 @@ put:
   description: Put Resource Type for <<resourcePathName | !singularize | !uppercamelcase>> summary.
   responses:
     200:
-      description: Success Response
+      description: |
+        Success Response
       body:
         application/json:
           example: <<putResponseExample>>
+    400:
+      description: |
+        Bad Request
+      body:
+        application/json:
+          example: <<errorResponseExample>>
+          type: <<errorResponseType>>
+    500:
+      description: |
+        Internal Server Error
+      body:
+        application/json:
+          example: <<errorResponseExample>>
+          type: <<errorResponseType>>
+    502:
+      description: |
+        Bad Gateway
+      body:
+        application/json:
+          example: <<errorResponseExample>>
+          type: <<errorResponseType>>
+    504:
+      description: |
+        Gateway Timeout
+      body:
+        application/json:
+          example: <<errorResponseExample>>
+          type: <<errorResponseType>>
 delete:
   displayName: Delete Resource Type for <<resourcePathName | !singularize | !uppercamelcase>> summary.
   description: Delete Resource Type for <<resourcePathName | !singularize | !uppercamelcase>> summary.
@@ -50,3 +80,24 @@ delete:
       body:
         application/json:
           example: <<deleteResponseExample>>
+    500:
+      description: |
+        Internal Server Error
+      body:
+        application/json:
+          example: <<errorResponseExample>>
+          type: <<errorResponseType>>
+    502:
+      description: |
+        Bad Gateway
+      body:
+        application/json:
+          example: <<errorResponseExample>>
+          type: <<errorResponseType>>
+    504:
+      description: |
+        Gateway Timeout
+      body:
+        application/json:
+          example: <<errorResponseExample>>
+          type: <<errorResponseType>>
