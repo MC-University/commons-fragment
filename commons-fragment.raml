@@ -2,8 +2,8 @@
 usage: Collection of commonly reusable RAMLs
 
 resourceTypes:
-  createReadCollection: !include resourceTypes/item/delete.raml
-  createReadUpdateDeleteItem: !include resourceTypes/item/read.raml
+  createReadCollection: !include resourceTypes/collection/create-read.raml
+  readUpdateDeleteItem: !include resourceTypes/item/read-update-delete.raml
   createItem: !include resourceTypes/item/create.raml
   updateItem: !include resourceTypes/item/update.raml
   deleteItem: !include resourceTypes/item/delete.raml
