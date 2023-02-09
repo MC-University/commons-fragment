@@ -2,11 +2,11 @@
 usage: Collection of commonly reusable RAMLs
 
 resourceTypes:
-  createReadCollection: !include resourceTypes/item/delete.raml,
-  createReadUpdateMember: !include resourceTypes/member/read.raml
-  createMember: !include resourceTypes/member/create.raml
-  updateMember: !include resourceTypes/member/update.raml
-  deleteMember: !include resourceTypes/member/delete.raml
+  createReadCollection: !include resourceTypes/item/delete.raml
+  createReadUpdateDeleteItem: !include resourceTypes/item/read.raml
+  createItem: !include resourceTypes/item/create.raml
+  updateItem: !include resourceTypes/item/update.raml
+  deleteItem: !include resourceTypes/item/delete.raml
 
 traits:
   #for caching
