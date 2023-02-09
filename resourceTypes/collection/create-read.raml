@@ -38,7 +38,36 @@ post:
   description: Post Resource Type for <<resourcePathName | !singularize | !uppercamelcase>> summary.
   responses:
     201:
-      description: Success Response
+      description: |
+        Success Response
       body:
         application/json:
           example: <<postResponseExample>>
+    400:
+      description: |
+        Bad Request
+      body:
+        application/json:
+          example: <<errorResponseExample>>
+          type: <<errorResponseType>>
+    500:
+      description: |
+        Internal Server Error
+      body:
+        application/json:
+          example: <<errorResponseExample>>
+          type: <<errorResponseType>>
+    502:
+      description: |
+        Bad Gateway
+      body:
+        application/json:
+          example: <<errorResponseExample>>
+          type: <<errorResponseType>>
+    504:
+      description: |
+        Gateway Timeout
+      body:
+        application/json:
+          example: <<errorResponseExample>>
+          type: <<errorResponseType>>
