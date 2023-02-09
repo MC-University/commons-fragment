@@ -20,3 +20,12 @@ get:
         application/json:
           example: <<getResponseExample>>
           type: <<getResponseType>>
+put:
+  displayName: Put Resource Type for <<resourcePathName | !singularize | !uppercamelcase>> summary.
+  description: Put Resource Type for <<resourcePathName | !singularize | !uppercamelcase>> summary.
+  responses:
+    200:
+      description: Success Response
+      body:
+        application/json:
+          example: <<patchResponseExample>>
