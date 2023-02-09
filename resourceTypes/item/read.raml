@@ -6,8 +6,30 @@ get:
   description: Get Resource Type for <<resourcePathName | !singularize | !uppercamelcase>> summary.
   responses:
     200:
-      description: Success Response
+      description: |
+        Success Response
       body:
         application/json:
           example: <<getResponseExample>>
           type: <<getResponseType>>
+    500:
+      description: |
+        Internal Server Error
+      body:
+        application/json:
+          example: <<errorResponseExample>>
+          type: <<errorResponseType>>
+    502:
+      description: |
+        Bad Gateway
+      body:
+        application/json:
+          example: <<errorResponseExample>>
+          type: <<errorResponseType>>
+    504:
+      description: |
+        Gateway Timeout
+      body:
+        application/json:
+          example: <<errorResponseExample>>
+          type: <<errorResponseType>>
