@@ -2,11 +2,40 @@
 usage: Update a single record
 
 put:
-  displayName: Put Resource Type for <<resourcePathName | !singularize | !uppercamelcase>> summary.
-  description: Put Resource Type for <<resourcePathName | !singularize | !uppercamelcase>> summary.
+  displayName: Put Resource Type for <<resourcePathName | !singularize | !uppercamelcase>>
+  description: Put Resource Type for <<resourcePathName | !singularize | !uppercamelcase>>
   responses:
     200:
-      description: Success Response
+      description: |
+        Success Response
       body:
         application/json:
-          example: <<patchResponseExample>>
+          example: <<putResponseExample>>
+    400:
+      description: |
+        Bad Request
+      body:
+        application/json:
+          example: <<errorResponseExample>>
+          type: <<errorResponseType>>
+    500:
+      description: |
+        Internal Server Error
+      body:
+        application/json:
+          example: <<errorResponseExample>>
+          type: <<errorResponseType>>
+    502:
+      description: |
+        Bad Gateway
+      body:
+        application/json:
+          example: <<errorResponseExample>>
+          type: <<errorResponseType>>
+    504:
+      description: |
+        Gateway Timeout
+      body:
+        application/json:
+          example: <<errorResponseExample>>
+          type: <<errorResponseType>>
