@@ -16,9 +16,9 @@ traits:
   hasCommonHeaders: !include traits/commons/hasCommonHeaders.raml
 
   #for pagination
-  hasCountable: !include traits/pagination/hasCountable.raml
-  hasPageable: !include traits/pagination/hasPageable.raml
-  hasSortable: !include traits/pagination/hasSortable.raml
+  searchable: !include traits/pagination/hasCountable.raml
+  sortable: !include traits/pagination/hasPageable.raml
+  pageable: !include traits/pagination/hasSortable.raml
 
   #for rate-limiting
   hasRateLimiting: !include traits/rate-limiting/hasRateLimiting.raml
