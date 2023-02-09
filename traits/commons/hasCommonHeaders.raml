@@ -1,1 +1,17 @@
 #%RAML 1.0 Trait
+usage: This trait is used to define the common headers
+
+headers:
+  Content-Type: 
+    type: string
+    description: used to identify the media type of the resource
+    default: "application/json"
+  Correlation-ID:
+    type: string
+    description: unique identifier that serves as a reference to a particular transaction
+  Client-ID:
+    type: string
+    description: unique identifier of the application
+  Client-Secret:
+    type: string
+    description: secret key used to access the application
