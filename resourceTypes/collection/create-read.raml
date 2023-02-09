@@ -1,9 +1,6 @@
 #%RAML 1.0 ResourceType
 usage: Retrieve list of all records and/or create a single record
 
-trait:
-  test: /
-
 get:
   displayName: Get Resource Type for <<resourcePathName | !singularize | !uppercamelcase>> summary.
   description: Get Resource Type for <<resourcePathName | !singularize | !uppercamelcase>> summary.
