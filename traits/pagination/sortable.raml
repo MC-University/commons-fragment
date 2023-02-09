@@ -1,1 +1,14 @@
 #%RAML 1.0 Trait
+usage: This trait is used for sorting collections
+
+queryParameters:
+  orderBy:
+    description: |
+      Order by field: <<fieldsList>>
+    type: string
+    required: false
+  order:
+    description: Order
+    enum: [desc, asc]
+    default: desc
+    required: false
